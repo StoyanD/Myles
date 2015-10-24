@@ -42,15 +42,17 @@
                 app:tv_typeface="roboto_light" />
 
         </LinearLayout>
-        <Button android:id="@+id/frag_intro_button"
+        <com.hack.twenty.views.RippleButtonView android:id="@+id/frag_intro_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:background="@drawable/intro_button_selector"
             android:textSize="40sp"
-            android:visibility="gone"
+            android:visibility="invisible"
+            android:text="Ok"
+            android:filterTouchesWhenObscured="true"
             android:onClick="@{introFrag.onButtonClick}"
-            android:text="Ok"/>
+            app:ripple_button_text='@{"Ok"}'/>
     </RelativeLayout>
 </layout>

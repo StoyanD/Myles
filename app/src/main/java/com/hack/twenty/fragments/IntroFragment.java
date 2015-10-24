@@ -89,7 +89,17 @@ public class IntroFragment extends Fragment {
 //        Animation fade = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in_animation);
 //        mBinding.fragmentIntroText.setAlpha(0);
         mBinding.fragmentIntroText.setText(getResources().getString(R.string.fragment_intro_myles_referrer_disclosure));
-        mBinding.fragIntroButton.setVisibility(View.VISIBLE);
+
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Animation fade = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in_animation);
+                mBinding.fragIntroButton.setVisibility(View.VISIBLE);
+                mBinding.fragIntroButton.startAnimation(fade);
+            }
+        }, 1000);
+
 //        mBinding.fragmentIntroText.startAnimation(fade);
     }
 
