@@ -58,7 +58,7 @@ public class IntroFragment extends Fragment {
     }
 
     private void playFadeIn(){
-        Animation fade = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in_animation);
+        Animation fade = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in_expand_x);
         mBinding.fragmentIntroText.startAnimation(fade);
         mBinding.fragmentIntroText.setVisibility(View.VISIBLE);
 

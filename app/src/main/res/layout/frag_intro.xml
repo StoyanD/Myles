@@ -37,7 +37,7 @@
                 android:paddingLeft="@dimen/fragment_intro_text_padding"
                 android:text="@string/fragment_intro_myles_name_greeting"
                 android:textColor="@color/black"
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:textSize="@dimen/fragment_intro_referrer_disclosure"
                 app:tv_typeface="roboto_medium" />
 
