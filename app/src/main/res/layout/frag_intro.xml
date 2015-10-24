@@ -27,12 +27,10 @@
                 android:layout_toRightOf="@+id/fragment_intro_myles_logo"
                 android:paddingLeft="20dp"
                 android:text="@string/fragment_intro_myles_name_greeting"
-                android:textSize="50sp"
                 android:textColor="@color/black"
+                android:textSize="50sp"
                 app:tv_typeface="roboto_medium" />
 
         </RelativeLayout>
-
-
     </RelativeLayout>
 </layout>
