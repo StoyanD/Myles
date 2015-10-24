@@ -39,8 +39,18 @@
                 android:textColor="@color/black"
                 android:visibility="gone"
                 android:textSize="@dimen/fragment_intro_referrer_disclosure"
-                app:tv_typeface="roboto_medium" />
+                app:tv_typeface="roboto_light" />
 
         </LinearLayout>
+        <Button android:id="@+id/frag_intro_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/intro_button_selector"
+            android:textSize="40sp"
+            android:visibility="gone"
+            android:onClick="@{introFrag.onButtonClick}"
+            android:text="Ok"/>
     </RelativeLayout>
 </layout>

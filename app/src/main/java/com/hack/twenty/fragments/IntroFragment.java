@@ -28,7 +28,7 @@ public class IntroFragment extends Fragment {
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
         mBinding =  FragIntroBinding.inflate(inflater, container, false);
-//        mBinding.setLoginFrag(this);
+        mBinding.setIntroFrag(this);
 //        mBinding.password.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 //            @Override
 //            public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
@@ -59,32 +59,42 @@ public class IntroFragment extends Fragment {
 
     private void playFadeIn(){
         Animation fade = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in_expand_x);
+        fade.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        changeText();
+                    }
+                }, 1000);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
         mBinding.fragmentIntroText.startAnimation(fade);
         mBinding.fragmentIntroText.setVisibility(View.VISIBLE);
+    }
 
-    //
-//        AnimatorSet set = new AnimatorSet();
-//        int height = mBinding.fragmentIntroText.getLayout().getHeight();
-        float width = getResources().getDimension(R.dimen.fragment_intro_text_width);
-//        //float fromX, float toX, float fromY, float toY
-//        ScaleAnimation scaleAnimation = new AnimationUtils.loadAnimation(0,0,height,height);
-//        set.playTogether(new ScaleAnimation());
-//        set.setDuration(duration);
-//        set = addListenersToSet(set);
-//        set.start();
+    private void changeText(){
+//        Animation fade = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in_animation);
+//        mBinding.fragmentIntroText.setAlpha(0);
+        mBinding.fragmentIntroText.setText(getResources().getString(R.string.fragment_intro_myles_referrer_disclosure));
+        mBinding.fragIntroButton.setVisibility(View.VISIBLE);
+//        mBinding.fragmentIntroText.startAnimation(fade);
+    }
 
-//        ObjectAnimator scale = ObjectAnimator.ofFloat(mBinding.fragmentIntroText, "x", width);
-//        ObjectAnimator alpha = ObjectAnimator.ofFloat(mBinding.fragmentIntroText, "alpha", 255);
-////        scale.setDuration(1000);
-//        alpha.setDuration(1000);
-//
-//        AnimatorSet alphaScale = new AnimatorSet();
-//        alphaScale.playTogether(alpha);
-//        alphaScale.start();
-//        Animation a = new AlphaAnimation(0f, 1.0f);
-//        a.setDuration(1000);
-//        a.setFillAfter(true);
-//        mBinding.fragmentIntroText.startAnimation(a);
+    public void onButtonClick(View view){
+
     }
 
 }
