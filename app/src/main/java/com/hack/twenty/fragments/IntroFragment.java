@@ -1,6 +1,7 @@
 package com.hack.twenty.fragments;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.LayoutInflater;
@@ -10,6 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.hack.twenty.R;
+import com.hack.twenty.activities.MainActivity;
 import com.hack.twenty.databinding.FragIntroBinding;
 
 /**
@@ -104,7 +106,10 @@ public class IntroFragment extends Fragment {
     }
 
     public void onButtonClick(View view){
-
+        Intent intent = new Intent(getActivity(), MainActivity.class);
+        startActivity(intent);
+        getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+        getActivity().finish();
     }
 
 }
