@@ -3,4 +3,5 @@
     android:id="@+id/fragment_intro"
     android:name="com.hack.twenty.fragments.IntroFragment"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" />
+    android:layout_height="match_parent"
+    android:layout_gravity="center"/>

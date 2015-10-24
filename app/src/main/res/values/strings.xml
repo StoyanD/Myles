@@ -3,4 +3,7 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- IntroFrag -->
+    <string name="fragment_intro_myles_name_greeting">Hi, I\'m Myles</string>
 </resources>

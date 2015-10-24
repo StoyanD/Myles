@@ -1,17 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/purple_500">
 
-        <ImageView
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:background="@drawable/myles_logo"
-            android:gravity="center"
-            android:keepScreenOn="true" />
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/fragment_intro_myles_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/myles_logo"
+                android:keepScreenOn="true" />
+
+            <com.github.omadahealth.typefaceview.TypefaceTextView
+                android:id="@+id/fragment_intro_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/fragment_intro_myles_logo"
+                android:paddingLeft="20dp"
+                android:text="@string/fragment_intro_myles_name_greeting"
+                android:textSize="50sp"
+                android:textColor="@color/black"
+                app:tv_typeface="roboto_medium" />
+
+        </RelativeLayout>
+
+
     </RelativeLayout>
 </layout>
