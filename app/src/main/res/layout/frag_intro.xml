@@ -10,6 +10,7 @@
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:padding="@dimen/fragment_intro_padding"
             android:layout_centerInParent="true">
 
             <ImageView
@@ -25,10 +26,10 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toRightOf="@+id/fragment_intro_myles_logo"
-                android:paddingLeft="20dp"
+                android:paddingLeft="@dimen/fragment_intro_text_padding"
                 android:text="@string/fragment_intro_myles_name_greeting"
                 android:textColor="@color/black"
-                android:textSize="50sp"
+                android:textSize="@dimen/fragment_intro_referrer_disclosure"
                 app:tv_typeface="roboto_medium" />
 
         </RelativeLayout>
