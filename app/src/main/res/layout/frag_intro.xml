@@ -7,31 +7,33 @@
         android:layout_height="match_parent"
         android:background="@color/purple_500">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/fragment_intro_padding"
-            android:layout_centerInParent="true">
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/fragment_intro_padding">
 
             <ImageView
                 android:id="@+id/fragment_intro_myles_logo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
                 android:background="@drawable/myles_logo"
                 android:keepScreenOn="true" />
 
             <com.github.omadahealth.typefaceview.TypefaceTextView
                 android:id="@+id/fragment_intro_text"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_toRightOf="@+id/fragment_intro_myles_logo"
+                android:layout_gravity="center_vertical"
+                android:alpha="0"
                 android:paddingLeft="@dimen/fragment_intro_text_padding"
                 android:text="@string/fragment_intro_myles_name_greeting"
                 android:textColor="@color/black"
                 android:textSize="@dimen/fragment_intro_referrer_disclosure"
                 app:tv_typeface="roboto_medium" />
 
-        </RelativeLayout>
+        </LinearLayout>
     </RelativeLayout>
 </layout>
