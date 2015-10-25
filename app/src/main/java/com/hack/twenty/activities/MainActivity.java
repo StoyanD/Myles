@@ -51,6 +51,20 @@ public class MainActivity extends Activity {
         super.onDestroy();
     }
 
+    public void showMoneyFragment(Fragment fragment, Fragment old) {
+        FragmentManager fm = getFragmentManager();
+        FragmentTransaction transaction = fm.beginTransaction();
+        transaction.addToBackStack(fragment.getClass().toString());
+        TransitionAnimation transitionAnimation = TransitionAnimation.FRAGMENT_TRANSITION_BOTTOM_STAY;
+        transaction.setCustomAnimations(transitionAnimation.getAnimationEnter(), transitionAnimation.getAnimationExit(), transitionAnimation.getAnimationPopEnter(), transitionAnimation.getAnimationPopExit());
+        if (old != null) {
+            transaction.hide(old);
+        }
+        transaction.add(R.id.content_frame_container, fragment, fragment.getClass().toString());
+        transaction.show(fragment);
+        transaction.commit();
+    }
+
 
     /**
      * Shows the fragment in the content_frame of the main layout. Shows fragment
