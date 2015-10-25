@@ -30,6 +30,9 @@
         <activity
             android:name=".activities.HistoryActivity"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name=".activities.CategoryActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>
