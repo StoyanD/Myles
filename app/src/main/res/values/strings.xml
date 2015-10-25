@@ -4,6 +4,9 @@
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
 
+    <!-- MainActivity -->
+    <string name="activity_main_default_tool_bar_text">How can I help you today?</string>
+
     <!-- IntroFrag -->
     <string name="fragment_intro_myles_name_greeting">Hi, I\'m Myles</string>
     <string name="fragment_intro_myles_referrer_disclosure">Andy sent me to you to help you get what you need</string>

@@ -2,8 +2,13 @@
 <resources>
 
     <color name="black">#231F20</color>
+    <color name="white">#FFFFFF</color>
     <color name="intro_purple_700">#b47b1fa2</color>
     <color name="intro_pressed_purple_700">#b4711a96</color>
+
+    <color name="blue_grey_400_transparent">#5078909c</color>
+    <color name="blue_grey_200_transparent">#67b0bec5</color>
+    <color name="blue_grey_100_transparent">#4ecfd8dc</color>
 
     <color name="red_50">#FFEBEE</color>
     <color name="red_100">#FFCDD2</color>

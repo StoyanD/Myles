@@ -2,9 +2,37 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <RelativeLayout android:id="@+id/content_tool_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500">
+        <ImageView android:id="@+id/content_tool_bar_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/myles_logo"/>
+        <com.github.omadahealth.typefaceview.TypefaceTextView
+            android:id="@+id/content_tool_bar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_toRightOf="@+id/content_tool_bar_image"
+            android:text="@string/activity_main_default_tool_bar_text"/>
+    </RelativeLayout>
+
+    <ImageView android:id="@+id/content_frame_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_below="@+id/content_tool_bar"
+        android:background="@drawable/shadow_down" />
+
     <FrameLayout
         android:id="@+id/content_frame_container"
+        android:layout_below="@+id/content_frame_shadow"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         android:orientation="vertical" />
 </RelativeLayout>
