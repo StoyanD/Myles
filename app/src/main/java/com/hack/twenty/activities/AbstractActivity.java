@@ -8,6 +8,8 @@ import android.os.Bundle;
 
 import com.hack.twenty.R;
 import com.hack.twenty.animation.TransitionAnimation;
+import com.squareup.okhttp.MediaType;
+import com.squareup.okhttp.OkHttpClient;
 
 /**
  * Created by stoyan on 10/24/15.
@@ -22,6 +24,8 @@ public abstract class AbstractActivity extends Activity {
      * Reference to the currently displaying fragment
      */
     protected Fragment mCurrentFragment;
+
+
 
 
     @Override
@@ -191,5 +195,6 @@ public abstract class AbstractActivity extends Activity {
         }
         return false;
     }
+
 
 }

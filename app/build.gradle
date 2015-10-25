@@ -28,4 +28,10 @@ dependencies {
 
     //TypefaceTextView
     compile 'com.github.omadahealth.typefaceview:typefaceview:1.4.0@aar'
+
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.4'
+
+    compile 'com.squareup.okhttp:okhttp:2.5.0'
+
+    compile 'com.google.code.gson:gson:2.3.1'
 }

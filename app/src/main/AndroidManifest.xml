@@ -4,6 +4,7 @@
 
     <application
         android:allowBackup="true"
+        android:name="com.hack.twenty.Money"
         android:icon="@drawable/myles_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
