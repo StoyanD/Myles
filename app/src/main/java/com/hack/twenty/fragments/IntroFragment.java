@@ -11,7 +11,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
 import com.hack.twenty.R;
-import com.hack.twenty.activities.MainActivity;
+import com.hack.twenty.activities.CategoryActivity;
 import com.hack.twenty.databinding.FragmentIntroBinding;
 
 /**
@@ -100,10 +100,10 @@ public class IntroFragment extends Fragment {
     }
 
     public void onButtonClick(View view) {
-        Intent intent = new Intent(getActivity(), MainActivity.class);
+        Intent intent = new Intent(getActivity(), CategoryActivity.class);
         startActivity(intent);
         getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
-        getActivity().finish();
+//        getActivity().finish();
     }
 
 }

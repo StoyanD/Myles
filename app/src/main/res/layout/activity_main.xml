@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:textSize="20sp"
-            android:textColor="@color/black"
+            android:textColor="@color/white"
             android:layout_toRightOf="@+id/content_tool_bar_image"
             android:text="@string/activity_main_default_tool_bar_text"/>
     </RelativeLayout>
