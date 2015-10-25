@@ -6,10 +6,9 @@ import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
 
+import com.github.omadahealth.typefaceview.TypefaceTextView;
 import com.hack.twenty.R;
 import com.hack.twenty.animation.TransitionAnimation;
-import com.squareup.okhttp.MediaType;
-import com.squareup.okhttp.OkHttpClient;
 
 /**
  * Created by stoyan on 10/24/15.
@@ -25,6 +24,7 @@ public abstract class AbstractActivity extends Activity {
      */
     protected Fragment mCurrentFragment;
 
+    protected TypefaceTextView mToolbar;
 
 
 
@@ -32,6 +32,7 @@ public abstract class AbstractActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mToolbar = (TypefaceTextView) findViewById(R.id.content_tool_bar_text);
         initLayout();
 
 

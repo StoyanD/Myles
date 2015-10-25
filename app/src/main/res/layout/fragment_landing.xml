@@ -22,42 +22,55 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="50dp"
-            android:layout_marginTop="50dp"
             android:layout_weight="1"
-            android:onClick="@{landingFrag.onOrderClick}"
-            android:background="@drawable/intro_button_selector">
+            android:paddingTop="50dp"
+            android:paddingBottom="30dp"
+            android:onClick="@{landingFrag.onOrderClick}">
 
-            <com.github.omadahealth.typefaceview.TypefaceTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
-                android:text="@string/fragment_landing_order_text"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                app:tv_typeface="roboto_light" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:background="@drawable/intro_button_selector"
+                android:onClick="@{landingFrag.onOrderClick}">
+
+                <com.github.omadahealth.typefaceview.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="@string/fragment_landing_order_text"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:tv_typeface="roboto_light" />
+            </LinearLayout>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginBottom="50dp"
             android:layout_weight="1"
-            android:onClick="@{landingFrag.onHistoryClick}"
-            android:background="@drawable/intro_button_selector">
+            android:paddingTop="30dp"
+            android:paddingBottom="50dp">
 
-            <com.github.omadahealth.typefaceview.TypefaceTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:paddingLeft="30dp"
-                android:paddingRight="30dp"
-                android:text="@string/fragment_landing_order_history_text"
-                android:textColor="@color/black"
-                android:textSize="30sp"
-                app:tv_typeface="roboto_light" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/intro_button_selector"
+                android:onClick="@{landingFrag.onHistoryClick}">
+
+                <com.github.omadahealth.typefaceview.TypefaceTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:text="@string/fragment_landing_order_history_text"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    app:tv_typeface="roboto_light" />
+            </LinearLayout>
         </RelativeLayout>
     </LinearLayout>
 </layout>
