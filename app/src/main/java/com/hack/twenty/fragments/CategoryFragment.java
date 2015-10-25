@@ -35,7 +35,7 @@ public class CategoryFragment extends Fragment implements NetworkInterface {
      */
     private FragmentCategoryBinding mBinding;
 
-    public static int categoryId = -1;
+    public static int categoryId = 1;
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
         mBinding = FragmentCategoryBinding.inflate(inflater, container, false);
@@ -46,17 +46,9 @@ public class CategoryFragment extends Fragment implements NetworkInterface {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Money.getCategories(CATEGORIES_URL, this);
+        Money.asyncGet(CATEGORIES_URL, this);
     }
 
-    private void getCategories() {
-//        Money.imageLoader.displayImage("http://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17011_ip.jpg",
-//                mBinding.bedroomImage);
-//        Money.imageLoader.displayImage("http://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17011_ip.jpg",
-//                mBinding.kitchenImage);
-//        Money.imageLoader.displayImage("http://www.jpl.nasa.gov/spaceimages/images/mediumsize/PIA17011_ip.jpg",
-//                mBinding.bathroomImage);
-    }
 
     @Override
     public void onNetworkResponse(String result) {

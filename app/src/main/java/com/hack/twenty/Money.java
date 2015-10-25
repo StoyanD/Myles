@@ -43,7 +43,7 @@ public class Money extends Application {
         return response.body().string();
     }
 
-    public static void getCategories(String url, NetworkInterface networkInterface){
+    public static void asyncGet(String url, NetworkInterface networkInterface){
         NetworkTask task = new NetworkTask(networkInterface);
         task.execute(url);
     }
