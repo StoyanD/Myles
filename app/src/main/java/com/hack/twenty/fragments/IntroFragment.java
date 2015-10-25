@@ -12,7 +12,7 @@ import android.view.animation.AnimationUtils;
 
 import com.hack.twenty.R;
 import com.hack.twenty.activities.MainActivity;
-import com.hack.twenty.databinding.FragIntroBinding;
+import com.hack.twenty.databinding.FragmentIntroBinding;
 
 /**
  * Created by stoyan on 10/24/15.
@@ -25,18 +25,12 @@ public class IntroFragment extends Fragment {
     /**
      * The layout binding for this fragment
      */
-    private FragIntroBinding mBinding;
+    private FragmentIntroBinding mBinding;
 
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
-        mBinding =  FragIntroBinding.inflate(inflater, container, false);
+        mBinding = FragmentIntroBinding.inflate(inflater, container, false);
         mBinding.setIntroFrag(this);
-//        mBinding.password.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//            @Override
-//            public boolean onEditorAction(TextView view, int actionId, KeyEvent event) {
-//                return editorActionPassword(view, actionId, event);
-//            }
-//        });
         return mBinding.getRoot();
     }
 
@@ -59,7 +53,7 @@ public class IntroFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    private void playFadeIn(){
+    private void playFadeIn() {
         Animation fade = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in_expand_x);
         fade.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -87,7 +81,7 @@ public class IntroFragment extends Fragment {
         mBinding.fragmentIntroText.setVisibility(View.VISIBLE);
     }
 
-    private void changeText(){
+    private void changeText() {
 //        Animation fade = AnimationUtils.loadAnimation(getActivity(), R.anim.fade_in_animation);
 //        mBinding.fragmentIntroText.setAlpha(0);
         mBinding.fragmentIntroText.setText(getResources().getString(R.string.fragment_intro_myles_referrer_disclosure));
@@ -105,7 +99,7 @@ public class IntroFragment extends Fragment {
 //        mBinding.fragmentIntroText.startAnimation(fade);
     }
 
-    public void onButtonClick(View view){
+    public void onButtonClick(View view) {
         Intent intent = new Intent(getActivity(), MainActivity.class);
         startActivity(intent);
         getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
