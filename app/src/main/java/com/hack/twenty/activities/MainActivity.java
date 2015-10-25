@@ -1,10 +1,10 @@
 package com.hack.twenty.activities;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 
 import com.hack.twenty.R;
 import com.hack.twenty.animation.TransitionAnimation;
@@ -13,7 +13,7 @@ import com.hack.twenty.fragments.LandingFragment;
 /**
  * Created by stoyan on 10/24/15.
  */
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends Activity {
     /**
      * Tag for logging this class
      */
@@ -95,7 +95,7 @@ public class MainActivity extends FragmentActivity {
             transaction.replace(R.id.content_frame_container, frag, frag.getClass().toString());
         }
         mCurrentFragment = frag;
-        transaction.commitAllowingStateLoss();
+        transaction.commit();
     }
 
     /**
@@ -166,5 +166,6 @@ public class MainActivity extends FragmentActivity {
         }
         return false;
     }
+
 
 }

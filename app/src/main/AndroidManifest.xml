@@ -23,9 +23,12 @@
 
         <activity
             android:name=".activities.MainActivity"
-            android:configChanges="locale"
-            android:launchMode="singleTask"
-            android:windowSoftInputMode="adjustPan"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".activities.OrderActivity"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".activities.HistoryActivity"
             android:screenOrientation="landscape"/>
     </application>
 
