@@ -40,7 +40,8 @@ public class GridViewAdapter extends ArrayAdapter {
             LayoutInflater inflater = ((Activity) context).getLayoutInflater();
             row = inflater.inflate(layoutResourceId, parent, false);
             holder = new ViewHolder();
-            holder.imageTitle = (TextView) row.findViewById(R.id.text);
+            holder.imageName = (TextView) row.findViewById(R.id.name);
+            holder.imagePrice = (TextView) row.findViewById(R.id.name);
             holder.image = (ImageView) row.findViewById(R.id.image);
             row.setTag(holder);
         } else {
@@ -49,7 +50,8 @@ public class GridViewAdapter extends ArrayAdapter {
 
         ItemApi item = data.get(position);
         if (item != null) {
-            holder.imageTitle.setText(item.name);
+            holder.imageName.setText(item.name);
+            holder.imagePrice.setText("($" + item.price/100 + ")");
             Money.imageLoader.displayImage(item.image_url,
                     holder.image);
         }
@@ -57,7 +59,8 @@ public class GridViewAdapter extends ArrayAdapter {
     }
 
     static class ViewHolder {
-        TextView imageTitle;
+        TextView imageName;
+        TextView imagePrice;
         ImageView image;
     }
 }
