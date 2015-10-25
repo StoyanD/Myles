@@ -5,8 +5,8 @@
     <data>
 
         <variable
-            name="itemFrag"
-            type="com.hack.twenty.fragments.ItemFragment" />
+            name="historyFrag"
+            type="com.hack.twenty.fragments.HistoryFragment" />
     </data>
 
     <LinearLayout

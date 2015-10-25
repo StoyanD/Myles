@@ -6,6 +6,9 @@
 
     <!-- MainActivity -->
     <string name="activity_main_default_tool_bar_text">How can I help you today?</string>
+    <!-- LandingFragment -->
+    <string name="fragment_landing_order_text">I want to buy something, Myles.</string>
+    <string name="fragment_landing_order_history_text">What are my past orders, Myles.</string>
 
     <!-- IntroFrag -->
     <string name="fragment_intro_myles_name_greeting">Hi, I\'m Myles</string>

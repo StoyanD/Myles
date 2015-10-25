@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentActivity;
 
 import com.hack.twenty.R;
 import com.hack.twenty.animation.TransitionAnimation;
+import com.hack.twenty.fragments.LandingFragment;
 
 /**
  * Created by stoyan on 10/24/15.
@@ -28,6 +29,7 @@ public class MainActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        showFragment(new LandingFragment(), false);
 
     }
 

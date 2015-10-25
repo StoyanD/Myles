@@ -6,25 +6,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.hack.twenty.databinding.FragmentOrdersBinding;
+import com.hack.twenty.databinding.FragmentOrderBinding;
 
 /**
  * Created by stoyan on 10/24/15.
  */
-public class OrdersFragment extends Fragment {
+public class OrderFragment extends Fragment {
     /**
      * TAG for logging
      */
-    private static final String TAG = "OrdersFragment";
+    private static final String TAG = "ItemFragment";
     /**
      * The layout binding for this fragment
      */
-    private FragmentOrdersBinding mBinding;
+    private FragmentOrderBinding mBinding;
 
     @Override
     public View onCreateView(final LayoutInflater inflater, final ViewGroup container, final Bundle savedInstanceState) {
-        mBinding =  FragmentOrdersBinding.inflate(inflater, container, false);
-        mBinding.setOrdersFrag(this);
+        mBinding =  FragmentOrderBinding.inflate(inflater, container, false);
+        mBinding.setOrderFrag(this);
         return mBinding.getRoot();
     }
 }

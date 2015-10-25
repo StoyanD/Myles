@@ -12,7 +12,52 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="100dp"
+        android:paddingRight="100dp"
 
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_weight="1"
+            android:onClick="@{landingFrag.onOrderClick}"
+            android:background="@drawable/intro_button_selector">
+
+            <com.github.omadahealth.typefaceview.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/fragment_landing_order_text"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:tv_typeface="roboto_light" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="50dp"
+            android:layout_weight="1"
+            android:onClick="@{landingFrag.onHistoryClick}"
+            android:background="@drawable/intro_button_selector">
+
+            <com.github.omadahealth.typefaceview.TypefaceTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/fragment_landing_order_history_text"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                app:tv_typeface="roboto_light" />
+        </RelativeLayout>
     </LinearLayout>
 </layout>

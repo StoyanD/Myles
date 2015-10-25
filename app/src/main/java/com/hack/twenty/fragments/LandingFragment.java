@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.hack.twenty.activities.MainActivity;
 import com.hack.twenty.databinding.FragmentLandingBinding;
 
 /**
@@ -26,5 +27,13 @@ public class LandingFragment extends Fragment {
         mBinding =  FragmentLandingBinding.inflate(inflater, container, false);
         mBinding.setLandingFrag(this);
         return mBinding.getRoot();
+    }
+
+    public void onOrderClick(View view){
+        ((MainActivity)getActivity()).showFragment(new OrderFragment(), true, false);
+    }
+
+    public void onHistoryClick(View view){
+        ((MainActivity)getActivity()).showFragment(new HistoryFragment(), true, false);
     }
 }
