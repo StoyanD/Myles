@@ -12,13 +12,24 @@ import java.io.IOException;
  */
 public class NetworkTask extends AsyncTask<String, Void, String> {
     NetworkInterface mCallback;
-    public NetworkTask(NetworkInterface callback){
+    boolean mGet = true;
+    String mJson;
+    public NetworkTask(NetworkInterface callback, boolean get){
         this.mCallback = callback;
+        this.mGet = get;
     }
+
+    public NetworkTask() {
+        this.mGet = false;
+    }
+
     @Override
     protected String doInBackground(String... params) {
         try {
-            return Money.get(params[0]);
+            if(mGet){
+                return Money.get(params[0]);
+            }
+            return Money.post(params[0], params[1]);
         } catch (IOException e) {
             e.printStackTrace();
         }

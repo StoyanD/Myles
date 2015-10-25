@@ -9,12 +9,12 @@
         android:icon="@drawable/myles_logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+        android:theme="@style/AppStyle">
         <activity
             android:name=".activities.IntroActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/app_name"
-            android:theme="@style/FullscreenTheme"
+            android:theme="@style/AppStyle"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

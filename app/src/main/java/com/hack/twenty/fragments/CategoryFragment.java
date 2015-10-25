@@ -55,7 +55,7 @@ public class CategoryFragment extends Fragment implements NetworkInterface {
         Log.d(TAG, result);
         Gson gson = new Gson();
         CategoryList list = gson.fromJson(result, CategoryList.class);
-        if (list != null && list.mCategories != null && list.mCategories.size() == 3) {
+        if (list != null && list.mCategories != null && list.mCategories.size() == 3 && isAdded()) {
             setView(mBinding.bedroomImage, mBinding.bedroomText, list.mCategories.get(0).image_url, list.mCategories.get(0).name);
             setView(mBinding.kitchenImage, mBinding.kitchenText, list.mCategories.get(1).image_url, list.mCategories.get(1).name);
             setView(mBinding.bathroomImage, mBinding.bathroomText, list.mCategories.get(2).image_url, list.mCategories.get(2).name);

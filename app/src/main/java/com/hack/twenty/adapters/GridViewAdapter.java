@@ -41,7 +41,7 @@ public class GridViewAdapter extends ArrayAdapter {
             row = inflater.inflate(layoutResourceId, parent, false);
             holder = new ViewHolder();
             holder.imageName = (TextView) row.findViewById(R.id.name);
-            holder.imagePrice = (TextView) row.findViewById(R.id.name);
+            holder.imagePrice = (TextView) row.findViewById(R.id.price);
             holder.image = (ImageView) row.findViewById(R.id.image);
             row.setTag(holder);
         } else {

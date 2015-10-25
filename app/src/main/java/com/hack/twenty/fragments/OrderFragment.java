@@ -1,6 +1,7 @@
 package com.hack.twenty.fragments;
 
 import android.app.Fragment;
+import android.app.FragmentManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -51,17 +52,24 @@ public class OrderFragment extends Fragment implements NetworkInterface {
         Log.d(TAG, result);
         Gson gson = new Gson();
         ItemList list = gson.fromJson(result, ItemList.class);
-        if (list != null) {
+        if (list != null && isAdded()) {
             GridViewAdapter gridAdapter = new GridViewAdapter(getActivity(), R.layout.view_item_cell, list.mItems);
             mBinding.gridView.setAdapter(gridAdapter);
 
             mBinding.gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
                     ItemApi item = (ItemApi) parent.getItemAtPosition(position);
-                    //Create intent
+                    launchDialogFragment(item);
                 }
             });
         }
+    }
+
+    private void launchDialogFragment(ItemApi item ) {
+        FragmentManager fm = getActivity().getFragmentManager();
+        OrderDialogFragment dialogFragment = new OrderDialogFragment();
+        dialogFragment.setApi(item);
+        dialogFragment.show(fm, dialogFragment.getClass().toString());
     }
 
 }
