@@ -53,7 +53,7 @@ public class OrderFragment extends Fragment implements NetworkInterface {
         Gson gson = new Gson();
         ItemList list = gson.fromJson(result, ItemList.class);
         if (list != null && isAdded()) {
-            GridViewAdapter gridAdapter = new GridViewAdapter(getActivity(), R.layout.view_item_cell, list.mItems);
+            GridViewAdapter gridAdapter = new GridViewAdapter(getActivity(), R.layout.view_item_cell, list.mItems, this);
             mBinding.gridView.setAdapter(gridAdapter);
 
             mBinding.gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -72,4 +72,7 @@ public class OrderFragment extends Fragment implements NetworkInterface {
         dialogFragment.show(fm, dialogFragment.getClass().toString());
     }
 
+    public void onClick(ItemApi item){
+        launchDialogFragment(item);
+    }
 }
